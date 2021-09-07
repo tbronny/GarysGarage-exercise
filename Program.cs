@@ -8,8 +8,8 @@ namespace Garage
         static void Main(string[] args) 
         {
             Tesla modelS = new Tesla() {Name = "modelS", MainColor = "Rose Gold", CurrentChargePercentage = 30.27};
-            Cessna mx410 = new Cessna() {Name = "mx410", MainColor = "Yellow"};
-            Ram rm1500 = new Ram() {Name = "rm1500", MainColor = "Black"};
+            Cessna mx410 = new Cessna() {Name = "mx410", MainColor = "Yellow", CurrentTankPercentage = 30.00};
+            Ram rm1500 = new Ram() {Name = "rm1500", MainColor = "Black", CurrentTankPercentage = 49.00};
             Zero fxs = new Zero() {Name = "fxs", MainColor = "Red", CurrentChargePercentage = 53.25};
             Zero fx = new Zero() {Name = "fx", CurrentChargePercentage = 50.25};
 
@@ -48,12 +48,12 @@ namespace Garage
 
             /***********************************************/
 
-            Ram ram = new Ram ();
-            Cessna cessna150 = new Cessna ();
+            Ram ram = new Ram () {Name = "ram", CurrentTankPercentage = 50.00};
+            Cessna cessna150 = new Cessna () {Name = "cessna150", CurrentTankPercentage = 63.00};
 
             List<IGasVehicle> gasVehicles = new List<IGasVehicle>() 
             {
-                ram, cessna150
+                ram, cessna150, rm1500, mx410
             };
 
             if (chargeInput == "N" || chargeInput == "Y")
